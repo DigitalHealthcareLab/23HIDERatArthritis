@@ -1,0 +1,14 @@
+{
+    "prefix": "reproduce",
+    "dataset": "ioa",
+    "memory_size": 160,
+    "memory_per_class": 10,
+    "fixed_memory": true,
+    "shuffle": false,
+    "init_cls": 4,
+    "increment": 4,
+    "model_name": "hider",
+    "convnet_type": "resnet50",
+    "device": ["0","1","2","3"],
+    "seed": [44444416]
+	}
