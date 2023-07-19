@@ -28,44 +28,28 @@ DER is a method that improves the efficiency of multi-class prediction by enabli
 
 ## Pre-requisites
 Run the following commands to clone this repository and install the required packages.
-
 ```bash
-git clone (...)
+git clone https://github.com/DigitalHealthcareLab/23HIDERatArthritis.git
 pip install -r requirements.txt
 ```
 
-### Hyperparameters
-
----
-
+## Hyperparameters
 - **memory_size**: The total number of preserved exemplar in the incremental learning process.
 - **memory_per_class**: The number of preserved exemplar per class ($\frac{memory-size}{K-classes}$).
 - **shuffle**: Whether to shuffle the class order or not.
 - **init_cls**: The number of classes in the initial incremental step.
 - **increment**: The number of classes in each incremental step $t$ ($t$ > 1).
 
-### Run Experiment
-
----
-
-- Edit the hider.json file for global settings.
-- Edit the structure of hierarchical labels in the base.py, Hi_DER.py, and hierarchical_loss.py file.
+## Run Experiment
+- Edit the [hider.json](./exps/hider.json) file for global settings.
+- Edit the structure of hierarchical labels in the [base.py](./models/base.py), [Hi_DER.py](./models/Hi_DER.py), and [hierarchical_loss.py](./utils/hierarchical_loss.py) file.
 - Run the following command to run the experiment.
-
 ```bash
 python main.py --config=./exps/hider.json
 ```
 
-### Acknowledgement
-
----
-
+## Acknowledgement
 Our code is based on [PyCIL](https://github.com/G-U-N/PyCIL). We thank the authors for providing the great base code.
 
 ### Citation
-
----
-
 If you find this code useful, please consider citing our paper.
-
-(…)
