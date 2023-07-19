@@ -1,36 +1,25 @@
 # 23HIDERatArthritis
+
 # Hi-DER
-
----
-
-This is the official PyTorch implementation of “**Classification models for osteoarthritis grades of multiple joints based on continual learning**” (RSNA Radiology 2023)
+This is the official PyTorch implementation of “[Classification models for osteoarthritis grades of multiple joints based on continual learning]()” (RSNA Radiology 2023)
 
 We developed a hierarchical osteoarthritis (OA) classification system for multiple joints that can be continuously updated by using a continual learning and hierarchical labeling strategy, hierarchical DER (Hi-DER), for classification model training. Please refer to our paper for more details.
 
-### Table of Contents
+## Table of Contents
+- [Introduction](#introduction)
+- [Proposed Architecture](#proposed-architecture)
+- [Pre-requisites](#pre-requisites)
+- [Hyperparameters](#hyperparameters)
+- [Run Experiment](#run-experiment)
+- [Acknowledgement](#acknowledgement)
+- [Citation](#citation)
 
----
-
-- [Introduction](https://www.notion.so/Hi-DER-e62acef7c3a042cfb99288ffc76ba01e?pvs=21)
-- [Proposed Architecture](https://www.notion.so/Hi-DER-e62acef7c3a042cfb99288ffc76ba01e?pvs=21)
-- [Pre-requisites](https://www.notion.so/Hi-DER-e62acef7c3a042cfb99288ffc76ba01e?pvs=21)
-- [Hyperparameters](https://www.notion.so/Hi-DER-e62acef7c3a042cfb99288ffc76ba01e?pvs=21)
-- [Run Experiment](https://www.notion.so/Hi-DER-e62acef7c3a042cfb99288ffc76ba01e?pvs=21)
-- [Acknowledgement](https://www.notion.so/Hi-DER-e62acef7c3a042cfb99288ffc76ba01e?pvs=21)
-- [Citation](https://www.notion.so/Hi-DER-e62acef7c3a042cfb99288ffc76ba01e?pvs=21)
-
-### Introduction
-
----
-
+## Introduction
 Training medical AI in a fixed range of settings, for instance, applying individualized training process to each of the multiple joints with various morphologies, is time-consuming and resource-intensive. Moreover, while AI model training for OA typically requires vast amounts of data, some joints or OA grades might lack sufficient data. Although some studies have applied continual learning to update the classification range of medical AI models, research for superior continual learning methods that utilize strategies such as dynamically expandable representation ([DER](https://arxiv.org/abs/2103.16788)) is lacking.
 
 DER is a method that improves the efficiency of multi-class prediction by enabling the simultaneous handling of multiple tasks and adaptation of new classifications. However, it assumes a dataset with no connection between the outcomes, while most outcomes in the medical domain in contrast have a hierarchical structure. Therefore, we propose a three-stage architecture that utilizes a hierarchical labeling approach within the incremental concept, to incorporate hierarchical information between the outcomes, and expand the applicability of DER.
 
 ### Proposed Architecture
-
----
-
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f6580a62-5661-43c5-b013-12108ee13c7f/Untitled.jpeg)
 
 - Image set with corresponding hierarchical labels (tree-based architecture) is used as the input at each incremental step (in our study, each step represents a different anatomical location).
