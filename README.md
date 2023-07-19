@@ -19,18 +19,14 @@ Training medical AI in a fixed range of settings, for instance, applying individ
 
 DER is a method that improves the efficiency of multi-class prediction by enabling the simultaneous handling of multiple tasks and adaptation of new classifications. However, it assumes a dataset with no connection between the outcomes, while most outcomes in the medical domain in contrast have a hierarchical structure. Therefore, we propose a three-stage architecture that utilizes a hierarchical labeling approach within the incremental concept, to incorporate hierarchical information between the outcomes, and expand the applicability of DER.
 
-### Proposed Architecture
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f6580a62-5661-43c5-b013-12108ee13c7f/Untitled.jpeg)
-
+## Proposed Architecture
+![Figure_1](https://github.com/DigitalHealthcareLab/23HIDERatArthritis/assets/61937818/a47212ce-9fcc-43f7-bf90-b17dbb797a92)
 - Image set with corresponding hierarchical labels (tree-based architecture) is used as the input at each incremental step (in our study, each step represents a different anatomical location).
 - The model is incrementally trained by expanding through multiple steps (multiple anatomies).
 - It accumulates knowledge from the previous steps, while incorporating new information from the current step.
 - Hierarchy-specific FC layers and classifiers are introduced at each step, and the model is trained by computing the hierarchical loss at each level of the classification hierarchy.
 
-### Pre-requisites
-
----
-
+## Pre-requisites
 Run the following commands to clone this repository and install the required packages.
 
 ```bash
