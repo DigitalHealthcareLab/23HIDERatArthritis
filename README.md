@@ -51,5 +51,5 @@ python main.py --config=./exps/hider.json
 ## Acknowledgement
 Our code is based on [PyCIL](https://github.com/G-U-N/PyCIL). We thank the authors for providing the great base code.
 
-### Citation
+## Citation
 If you find this code useful, please consider citing our paper.
