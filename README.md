@@ -1,7 +1,7 @@
 # 23HIDERatArthritis
 
 # Hi-DER
-This is the official PyTorch implementation of “[Classification models for osteoarthritis grades of multiple joints based on continual learning]()” (RSNA Radiology 2023)
+This is the official PyTorch implementation of “[Classification models for osteoarthritis grades of multiple joints based on continual learning]()” (---)
 
 We developed a hierarchical osteoarthritis (OA) classification system for multiple joints that can be continuously updated by using a continual learning and hierarchical labeling strategy, hierarchical DER (Hi-DER), for classification model training. Please refer to our paper for more details.
 
